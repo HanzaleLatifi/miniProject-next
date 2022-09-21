@@ -8,46 +8,41 @@ import { useState } from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
-function Header() {
-  const [display, setDisplay] = useState("column");
-  const [count, setCount] = useState("3");
-
+function Header({ onChangeDisplay, onChangeCount }) {
   const handleDisplay = (event) => {
-    setDisplay(event.target.value);
+    onChangeDisplay(event.target.value);
   };
   const handleInput = (event) => {
-    setCount(event.target.value);
+    onChangeCount(event.target.value);
   };
 
   return (
     <header className="w-full text-center  py-4 px-8 bg-yellow-100 mx-auto shadow-md mb-8 ">
-        <Grid container  spacing={4}>
-          <Grid item xs={12} sm={6}>
-            <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">Display</InputLabel>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={display}
-                label="Count of user to show"
-                onChange={handleDisplay}
-              >
-                <MenuItem value={"column"}>Column display</MenuItem>
-                <MenuItem value={"row"}>Row display</MenuItem>
-              </Select>
-            </FormControl>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              fullWidth
-              onChange={handleInput}
-              value={count}
-              id="outlined-basic"
-              label="Number of users to display"
-              variant="outlined"
-            />
-          </Grid>
+      <Grid container spacing={4}>
+        <Grid item xs={12} sm={6}>
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">Display</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              label="Count of user to show"
+              onChange={handleDisplay}
+            >
+              <MenuItem value={"column"}>Column display</MenuItem>
+              <MenuItem value={"row"}>Row display</MenuItem>
+            </Select>
+          </FormControl>
         </Grid>
+        <Grid item xs={12} sm={6}>
+          <TextField
+            fullWidth
+            onChange={handleInput}
+            id="outlined-basic"
+            label="Number of users to display per page"
+            variant="outlined"
+          />
+        </Grid>
+      </Grid>
     </header>
   );
 }
