@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import { getUsers } from "../services/getUsers";
 import CircularProgress from '@mui/material/CircularProgress';
 import { Pagination } from '@mui/material';
-import MoreInformations from '../components/MoreInformations';
 
 
  const RowCard = React.lazy(() => import('../components/RowCard'));
