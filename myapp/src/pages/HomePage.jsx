@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { getUsers } from "../services/getUsers";
 import CircularProgress from '@mui/material/CircularProgress';
 import { Pagination } from '@mui/material';
+import MoreInformations from '../components/MoreInformations';
 
 
  const RowCard = React.lazy(() => import('../components/RowCard'));
@@ -17,7 +18,7 @@ function HomePage() {
   const [pageData, setPageData] = useState([]);
   const [display, setDisplay] = useState("column"); //row display or column disply for card
   const [count, setCount] = useState("6");    //numberOfUser to show per page
-  const [currentPage, setCurrentPage] = useState("");    //numberOfUser to show per page
+  const [currentPage, setCurrentPage] = useState("");  
 
 
   useEffect(() => {

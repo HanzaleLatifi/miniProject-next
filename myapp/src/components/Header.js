@@ -4,9 +4,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import TextField from "@mui/material/TextField";
-import { useState } from "react";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
 
 function Header({ onChangeDisplay, onChangeCount }) {
   const handleDisplay = (event) => {
