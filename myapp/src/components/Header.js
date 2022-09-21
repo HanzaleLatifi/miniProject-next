@@ -20,9 +20,8 @@ function Header() {
   };
 
   return (
-    <header className="conttainer max-w-screen-md  text-center md:py-8 py-4 mx-auto">
-      <Box sx={{ margin:'10px'}}>
-        <Grid container spacing={2}>
+    <header className="w-full text-center  py-4 px-8 bg-yellow-100 mx-auto shadow-md mb-8 ">
+        <Grid container  spacing={4}>
           <Grid item xs={12} sm={6}>
             <FormControl fullWidth>
               <InputLabel id="demo-simple-select-label">Display</InputLabel>
@@ -49,7 +48,6 @@ function Header() {
             />
           </Grid>
         </Grid>
-      </Box>
     </header>
   );
 }
