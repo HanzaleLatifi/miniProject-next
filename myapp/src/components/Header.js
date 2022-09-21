@@ -20,7 +20,7 @@ function Header() {
   };
 
   return (
-    <header>
+    <header className="conttainer max-w-screen-md  text-center md:py-8 py-4 mx-auto">
       <Box sx={{ margin:'10px'}}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
